@@ -1,0 +1,138 @@
+ <!DOCTYPE html>
+<html>
+<head >
+<meta charset="utf-8">
+<link href="style.css" rel="stylesheet" media="all">
+<script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> 
+    </script> 
+    <script> 
+      
+        $.getJSON("https://api.ipify.org?format=json", 
+                                          function(data) { 
+            document.getElementById("ii").value = data.ip;
+        }) 
+    </script> 
+    
+<title>Izobarický dej</title>
+</head>
+<body >
+<header>
+
+<h1> Izobarický dej</h1>
+
+
+</header>
+
+
+<section>
+
+<form action="uloz.php" method="POST">
+
+<br> 
+<h4> 1. Úloha </h4> 
+   <p>
+    Zistite, akú teplotu bude mať plyn s objemom 500 dm³, ktorého počiatočný objem je 100 dm³ a počiatočná teplota je 10°C. 
+    
+   </p>
+   
+  <div>
+  <p><input type="radio" name="prva" id="vztlakova" value="1" required  <label for="vztlakova">273,05°C</label></p>
+	<p><input type="radio" name="prva" id="vztlkaova2" value="2" <label for="vztlakova2">342,48°C</label></p>
+	<p><input type="radio" name="prva" id="vztlakova3" value="3" <label for="vztlakova3">243,52°C</label>
+	<br>
+  </p>
+  </div>
+  
+  <h4> 2. Úloha </h4> 
+    <p>
+    Zistite akú hodnotu dosiahne teplota na konci experimentu. Pri počiatočnom objeme 225 dm³ a počiatočnej teplote 70°C.  
+   </p>
+   
+  <div>  
+	<p><input type="radio" name="druha" id="objem1" value="1" required  <label for="objem1">2400°C</label></p>
+	<p><input type="radio" name="druha" id="objem2" value="2" <label for="objem2">1255°C</label></p>
+	<p><input type="radio" name="druha" id="objem3" value="3" <label for="objem3">1174°C</label>
+	<br>
+  </p>
+  </div>
+  
+  <h4> 3. Úloha </h4> 
+    <p>
+    Zistite, aký veľký bude objem plynu pri počiatočnom objeme 400 dm³ a počiatočnej teplote 200°C v momente, keď dosiahne teplotu 800°C.
+   </p>
+   
+  <div> 
+  <p><input type="radio" name="tretia" id="potopi" value="1" required  <label for="potopi">907,24 dm³</label></p>
+	<p><input type="radio" name="tretia" id="nepotopi" value="2" <label for="nepotopi">954,45 dm³</label></p>
+  <p><input type="radio" name="tretia" id="nepotop" value="3" <label for="nepotop">902,75 dm³</label>
+	<br>
+  </p>
+  </div>
+  
+  <h4> 4. Úloha </h4> 
+    <p>
+   Zistite, aký je teplotný rozdiel po ukončení dvoch experimentov. Prvý experiment má počiatočný objem 100 dm³ a počiatočnú teplotu 
+   0°C. Druhý experiment má počiatočný objem 400 dm³ a počiatočnú teplotu  0°C. 
+   </p>
+  
+  <div> 
+  <p><input type="radio" name="stvrta" id="obj1" value="1" required  <label for="obj1">70°C</label></p>
+	<p><input type="radio" name="stvrta" id="obj2" value="2" <label for="obj2">250°C</label></p>
+	<p><input type="radio" name="stvrta" id="obj3" value="3" <label for="obj3">2050°C</label>
+	<br>
+  </p>
+   </div>
+   
+  
+  
+  <h4> 5. Úloha </h4> 
+    <p>
+   Zistite, aká bude maximálna teplota pri nastavení experimentu s počiatočným objemom 200 dm³ a počiatočnou teplotou 50°C.
+   </p>
+   
+  <div> 
+  <p><input type="radio" name="piata" id="obji1" value="1" required  <label for="obji1">1345°C</label></p>
+	<p><input type="radio" name="piata" id="obji2" value="2" <label for="obji2">1437,54°C</label></p>
+  <p><input type="radio" name="piata" id="obji3" value="3" <label for="obji3">1212,82°C</label>
+	<br>
+  </p>
+  </div>
+  
+  <br>
+ 
+
+ 
+ <input id ="idcko" type="text" value="IzobarickyDej2" name="id" hidden>
+ <input id="ii" type="text" name="ip" value="" hidden>
+ <input id="cas" type="text" name="c" value="" hidden>  
+ <input id="datum" type="text" name="d" value="" hidden>  
+ 
+  
+<input type="submit" value="pošli" name="tlacidlo">
+</form> 
+ 
+<script>
+        var dt = new Date();
+        var ho = dt.getHours();
+        var mi = dt.getMinutes();
+        var se = dt.getSeconds();
+        document.getElementById("cas").value = Math.floor(ho / 10) + "" + ho % 10 + ":" +
+                                               Math.floor(mi / 10) + "" + mi % 10 + ":" +
+                                               Math.floor(se / 10) + "" + se % 10;
+        //dt.toLocaleTimeString();
+        y = dt.getFullYear();
+        m = dt.getMonth() + 1;
+        d = dt.getDate();
+        var pom = y+'-'+ Math.floor(m / 10) + '' + (m % 10) +'-'+ Math.floor(d / 10) + '' + (d % 10);
+        console.log(Math.floor(m / 10));
+        document.getElementById("datum").value = pom;
+       
+    
+    </script>
+ 
+</section>
+
+
+  </body>
+</html>

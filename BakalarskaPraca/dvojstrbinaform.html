@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head >
+<meta charset="utf-8">
+<link href="style.css" rel="stylesheet" media="all">
+<script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> 
+    </script> 
+    <script> 
+      
+        $.getJSON("https://api.ipify.org?format=json", 
+                                          function(data) { 
+            document.getElementById("ii").value = data.ip;
+        }) 
+    </script> 
+<title>Dvojštrbinový Experiment</title>
+</head>
+<body >
+<header>
+
+<h1> Dvojštrbinový Experiment</h1>
+
+
+</header>
+
+
+<section>
+
+<form action="uloz.php" method="POST">
+
+<br> 
+
+  <h4> 1. Úloha </h4> 
+    <p>
+   Čo vidíme, ak nastavíme v experimente vlnovú dĺžku svetla na minimum a  šírku štrbín spolu s vzdialenosťou štrbín na maximum ? 
+   </p>
+   
+  <div> 
+  <p><input type="radio" name="prva" id="obj1" value="1" required  <label for="obj1">3 pásy tesne pri sebe</label></p>
+	<p><input type="radio" name="prva" id="obj2" value="2" <label for="obj2">5 pásov, pričom 3 sú hrubé a 2 tenké </label></p>
+	<p><input type="radio" name="prva" id="obj3" value="3" <label for="obj3">1 hrubý pás</label>
+	<br>
+  </p>
+  </div>
+  
+ 
+  
+  <h4> 2. Úloha </h4> 
+    <p>
+   Ako ovplyvňuje experiment vzdialenosť štrbín ?
+   </p>
+   
+  <div> 
+  <p><input type="radio" name="druha" id="objp1" value="1" required  <label for="objp1">čím je väčšia, tým sú pásy hrubšie</label></p>
+	<p><input type="radio" name="druha" id="objp2" value="2" <label for="objp2">vôbec</label></p>
+	<p><input type="radio" name="druha" id="objp3" value="3" <label for="objp3">čím je väčšia, tým je na platni viac pásov</label>
+	<br>
+  </p>
+  </div>
+  
+  <h4> 3. Úloha </h4> 
+    <p>
+   Ako ovplyvňuje experiment šírka štrbín ?
+   </p>
+  
+  <div> 
+  <p><input type="radio" name="tretia" id="objo1" value="1" required  <label for="objo1">čim je väčšia, tým je na platni menej pásov</label></p>
+	<p><input type="radio" name="tretia" id="objo2" value="2" <label for="objo2">čim je väčšia, tým sú pásy hrubšie</label>
+	<br>
+  </p>
+  </div>
+  
+  
+  
+   <h4> 4. Úloha </h4> 
+    <p>
+   Ako ovplyvňuje experiment vlnová dĺžka svetla ?
+   </p>
+   
+  <div> 
+  <p><input type="radio" name="stvrta" id="objq1" value="1" required  <label for="objq1">čím je väčšia, tým sú pásy hrubšie</label></p>
+	<p><input type="radio" name="stvrta" id="objq2" value="2" <label for="objq2">čím je väčšia, tým je na platni viac pásov</label></p>
+	<p><input type="radio" name="stvrta" id="objq3" value="3" <label for="objq3">experiment neovplyvňuje vôbec, ovplyvňuje iba farbu svetla</label>
+	<br>
+  </p>
+  </div>
+  
+  <h4> 5. Úloha </h4> 
+    <p>
+   Čo dokazuje dvojštrbinový experiment o svetle ?
+   </p>
+   
+  <div> 
+  <p><input type="radio" name="piata" id="objw1" value="1" required  <label for="objw1">svetlo sa správa ako vlna</label></p>
+	<p><input type="radio" name="piata" id="objw2" value="2" <label for="objw2">svetlo sa správa aj ako vlna aj ako častica</label></p>
+	<p><input type="radio" name="piata" id="objw3" value="3" <label for="objw3">svetlo sa správa ako častica</label>
+	<br>
+  </p>
+  </div>
+  <br>
+  
+ <input id="idcko" type="text" value="DvojstrbinovyExperiment" name="id" hidden>
+ <input id="ii" type="text" name="ip" value="" hidden>
+ <input id="cas" type="text" name="c" value="" hidden>  
+ <input id="datum" type="text" name="d" value="" hidden>  
+ 
+  
+<input type="submit" value="pošli" name="tlacidlo">
+</form> 
+ 
+<script>
+        var dt = new Date();
+        var ho = dt.getHours();
+        var mi = dt.getMinutes();
+        var se = dt.getSeconds();
+        document.getElementById("cas").value = Math.floor(ho / 10) + "" + ho % 10 + ":" +
+                                               Math.floor(mi / 10) + "" + mi % 10 + ":" +
+                                               Math.floor(se / 10) + "" + se % 10;
+        //dt.toLocaleTimeString();
+        y = dt.getFullYear();
+        m = dt.getMonth() + 1;
+        d = dt.getDate();
+        var pom = y+'-'+ Math.floor(m / 10) + '' + (m % 10) +'-'+ Math.floor(d / 10) + '' + (d % 10);
+        console.log(Math.floor(m / 10));
+        document.getElementById("datum").value = pom;
+       
+    
+    </script>
+ 
+ 
+ 
+
+
+</section>
+
+
+  </body>
+</html>

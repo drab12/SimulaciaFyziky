@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head >
+<meta charset="utf-8">
+<link href="style.css" rel="stylesheet" media="all">
+<script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> 
+    </script> 
+    <script> 
+      
+        $.getJSON("https://api.ipify.org?format=json", 
+                                          function(data) { 
+            document.getElementById("ii").value = data.ip;
+        }) 
+    </script> 
+<title>Spätná väzba</title>
+</head>
+<body >
+<header>
+
+<h1> </h1>
+
+
+</header>
+
+
+<section>  
+
+<form action="ulozspat.php" method="POST">
+
+
+<br> 
+
+<label for="druhtelesa"> Vek  </label>
+       <select name="vek" size="1"  id="vek" required >
+    <option value="">-</option>   
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>   
+    <option value="10">10</option>
+    <option value="11">11</option> 
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option> 
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option> 
+    <option value="21">21</option>
+       
+  </select>
+  <br>
+  <br>
+<h4> 1. Otázka </h4> 
+   <p>
+   Nakoľko bolo ovládanie experimentov intuitívne? (1 - najmenej, 5 - najviac)
+   </p>
+   <p>
+	<input type="radio" name="prva" id="vztlakova" value="1" required  <label for="vztlakova">1</label>
+	<input type="radio" name="prva" id="vztlkaova2" value="2" <label for="vztlakova2">2</label>
+	<input type="radio" name="prva" id="vztlakova3" value="3" <label for="vztlakova3">3</label>
+  <input type="radio" name="prva" id="vztlakova4" value="4" <label for="vztlakova4">4</label>
+  <input type="radio" name="prva" id="vztlakova5" value="5" <label for="vztlakova5">5</label>
+	<br>
+  </p>
+  
+  <h4> 2. Otázka </h4> 
+    <p>
+     V čom by sa dalo ovládanie experimentov zlepšiť?  
+   </p>
+  <p>   
+	<textarea name="druha" id="druh" rows="3" cols="35"></textarea>
+	<br>
+  </p>
+  
+  
+  <h4> 3. Otázka </h4> 
+    <p>
+     Z hľadiska teoretického fyzikálneho princípu experimentov, nakoľko si rozumel(a), čo sa v experimente deje?
+   </p>
+  <p>
+   
+	<input type="radio" name="tretia" id="nepotopi1" value="1" required  <label for="nepotopi1">1</label>
+	<input type="radio" name="tretia" id="nepotopi2" value="2" <label for="nepotopi2">2</label>
+  <input type="radio" name="tretia" id="nepotop3" value="3" <label for="nepotop3">3</label>
+  <input type="radio" name="tretia" id="nepotop4" value="4" <label for="nepotop4">4</label>
+  <input type="radio" name="tretia" id="nepotop5" value="5" <label for="nepotop5">5</label>
+	<br>
+  </p>
+  
+  <h4> 4. Otázka </h4> 
+    <p>
+    Čo by Ti pomohlo lepšie porozumieť fyzikálnym princípom experimentov?
+   </p>
+  <p>
+   
+	<textarea name="stvrta" id="stvrt" rows="3" cols="35"></textarea>
+	
+	<br>
+  </p>
+  
+  <h4> 5. Otázka </h4> 
+    <p>
+   Voliteľné veličiny v experimentoch - nakoľko máš pocit, že rozumieš, čo každý z nich v experimente mení? 
+   (1 - skoro vôbec nerozumiem nastavovaniu veličín, 5 - všetkým nastavovateľným veličinám rozumiem)
+   </p>
+  <p>
+   
+	<input type="radio" name="piata" id="obj1" value="1" required  <label for="obj1">1</label>
+	<input type="radio" name="piata" id="obj2" value="2" <label for="obj2">2</label>
+	<input type="radio" name="piata" id="obj3" value="3" <label for="obj3">3</label>
+  <input type="radio" name="piata" id="obj4" value="4" <label for="obj4">4</label>
+  <input type="radio" name="piata" id="obj5" value="5" <label for="obj5">5</label>
+	<br>
+  </p>
+  
+   <h4> 6. Otázka </h4> 
+    <p>
+   Všimol/la si si nejakú chybu, alebo niečo, čo by sme mohli v aplikácii vylepšiť, opraviť?
+   </p>
+  <p>
+   
+	<textarea name="siesta" id="siest" rows="3" cols="35"></textarea>
+	
+	<br>
+  </p>
+  
+<input id="ii" type="text" name="ip" value="" hidden>
+ <input id="cas" type="text" name="c" value="" hidden>  
+ <input id="datum" type="text" name="d" value="" hidden>  
+
+
+<input type="submit" value="pošli" name="tlacidlo">
+</form> 
+ 
+<script>
+        var dt = new Date();
+        var ho = dt.getHours();
+        var mi = dt.getMinutes();
+        var se = dt.getSeconds();
+        document.getElementById("cas").value = Math.floor(ho / 10) + "" + ho % 10 + ":" +
+                                               Math.floor(mi / 10) + "" + mi % 10 + ":" + 
+                                               Math.floor(se / 10) + "" + se % 10;
+        //dt.toLocaleTimeString();
+        y = dt.getFullYear();
+        m = dt.getMonth() + 1;
+        d = dt.getDate();
+        var pom = y+'-'+ Math.floor(m / 10) + '' + (m % 10) +'-'+ Math.floor(d / 10) + '' + (d % 10);
+        console.log(Math.floor(m / 10));
+        document.getElementById("datum").value = pom;
+       
+    
+    </script>
+ 
+ 
+
+
+</section>
+
+
+  </body>
+</html>

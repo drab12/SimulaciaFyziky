@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head >
+<meta charset="utf-8">
+<link href="style.css" rel="stylesheet" media="all">
+<script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> 
+    </script> 
+    <script> 
+      
+        $.getJSON("https://api.ipify.org?format=json", 
+                                          function(data) { 
+            document.getElementById("ii").value = data.ip;
+        }) 
+    </script> 
+<title>Dvojštrbinový Experiment</title>
+</head>
+<body >
+<header>
+
+<h1> Dvojštrbinový Experiment</h1>
+
+
+</header>
+
+
+<section>
+
+<form action="uloz.php" method="POST">
+
+<br> 
+<h4> 1. Úloha </h4> 
+   <p>
+    Čo môžeme pozorovať, ak nastavíme vlnovú dĺžku svetla na 501 nm, šírku štrbiny na 2707 nm a vzdialenosť
+    štrbín na 5037 nm ?
+   </p>
+   
+   <div>
+   <p><input type="radio" name="prva" id="vztlakova" value="1" required  <label for="vztlakova">1 veľký hrubý pás v strede</label></p>
+	 <p><input type="radio" name="prva" id="vztlkaova2" value="2" <label for="vztlakova2">1  pás v strede a 2 na kraji </label></p>
+	 <p><input type="radio" name="prva" id="vztlakova3" value="3" <label for="vztlakova3">3 pásy v strede</label>
+	 <br>
+   </p>
+   </div>
+  
+  <h4> 2. Úloha </h4> 
+    <p>
+    Čo vidíme, ak nastavíme v experimente vlnovú dĺžku svetla na minimum, šírku štrbín na minimum a vzdialenosť štrbín na maximum ?  
+   </p>
+   
+  <div> 
+  <p><input type="radio" name="druha" id="objem1" value="1" required  <label for="objem1">množstvo tenkých pásikov</label></p>
+	<p><input type="radio" name="druha" id="objem2" value="2" <label for="objem2">5 tenkých pásov</label></p>
+	<p><input type="radio" name="druha" id="objem3" value="3" <label for="objem3">nič</label>
+	<br>
+  </p>
+  </div>
+  
+  <h4> 3. Úloha </h4> 
+    <p>
+    Čo vidíme, ak nastavíme v experimente vlnovú dĺžku svetla na maximum, šírku štrbín na maximum a vzdialenosť štrbín na minimum ? 
+   </p>
+   
+  <div> 
+  <p><input type="radio" name="tretia" id="potopi" value="1" required  <label for="potopi">2 hrubé pásy</label></p>
+	<p><input type="radio" name="tretia" id="nepotopi" value="2" <label for="nepotopi">1 hrubý pás</label></p>
+  <p><input type="radio" name="tretia" id="nepotop" value="3" <label for="nepotop">1 tenký pás</label>
+	<br>
+  </p>
+  </div>
+  
+  <h4> 4. Úloha </h4> 
+    <p>
+   Čo vidíme, ak nastavíme v experimente vlnovú dĺžku svetla na 428 nm, šírku štrbín na 1157 nm a vzdialenosť štrbín na 2237 nm ? 
+   </p>
+  
+  <div> 
+  <p><input type="radio" name="stvrta" id="zel" value="1" required  <label for="zel">3 hrubé pásy</label></p>
+	<p><input type="radio" name="stvrta" id="ol" value="2" <label for="ol">5 tenkých pásov</label></p>
+  <p><input type="radio" name="stvrta" id="oli" value="3" <label for="oli">7 tenkých pásov</label>	
+	<br>
+  </p>
+  </div>
+  
+  
+   <h4> 5. Úloha </h4> 
+    <p>
+   Akú farbu budeme vidieť, ak nastavíme vlnovú dĺžku svetla na 490 nm ? 
+   </p>
+   
+  <div> 
+  <p><input type="radio" name="piata" id="objc1" value="1" required  <label for="objc1">tyrkysovú</label></p>
+	<p><input type="radio" name="piata" id="objc2" value="2" <label for="objc2">zelenú</label></p>
+  <p><input type="radio" name="piata" id="objc3" value="3" <label for="objc3">červenú</label>	
+	<br>
+  </p>
+  </div>
+  
+  <h4> 6. Úloha </h4> 
+    <p>
+   Ako sa volá obrazec, ktorý sa zobrazuje na platni ?
+   </p>
+   
+  <div> 
+  <p><input type="radio" name="siesta" id="objk1" value="1" required  <label for="objk1">indiferenčný</label></p>
+	<p><input type="radio" name="siesta" id="objk2" value="2" <label for="objk2">interferenčný</label></p>
+	<p><input type="radio" name="siesta" id="objk3" value="3" <label for="objk3">vlnoplochový</label>
+	<br>
+  </p>
+  </div>
+  
+  <h4> 7. Úloha </h4> 
+    <p>
+   Ako sa voláju častice, ktoré dopadajú na fotografickú platňu ?
+   </p>
+   
+  <div> 
+  <p><input type="radio" name="siedma" id="obji1" value="1" required  <label for="obji1">elektróny</label></p>
+	<p><input type="radio" name="siedma" id="obji2" value="2" <label for="obji2">fotóny</label></p>
+  <p><input type="radio" name="siedma" id="obji3" value="3" <label for="obji3">neutróny</label>
+	<br>
+  </p>
+  </div>
+  
+  
+  
+  <h4> 8. Úloha </h4> 
+    <p>
+     Zistite, aký je rozdiel medzi dvomi experimentmi. Prvý experiment má vlnovú dĺžku svetla 600 nm, šírku štrbín 2000 nm a vzdialenosť štrbín 6008 nm.
+   Druhý experiment má vlnovú dĺžku svetla 780 nm, šírku štrbín 2000 nm a vzdialenosť štrbín 6008 nm.
+   </p>
+   
+  <div> 
+  <p><input type="radio" name="osma" id="obje1" value="1" required  <label for="obje1">pri prvom experimente sa na platni náchádza menej pásov</label></p>
+	<p><input type="radio" name="osma" id="obje2" value="2" <label for="obje2">pri druhom experimente sú pásy hrubšie </label></p>
+	<p><input type="radio" name="osma" id="obje3" value="3" <label for="obje3">pri druhom experimente sú pásy tenšie</label>
+	<br>
+  </p>
+  </div>
+  
+  <br>
+  
+ <input id="idcko" type="text" value="DvojstrbinovyExperiment2" name="id" hidden>
+ <input id="ii" type="text" name="ip" value="" hidden>
+ <input id="cas" type="text" name="c" value="" hidden>  
+ <input id="datum" type="text" name="d" value="" hidden>  
+ 
+  
+<input type="submit" value="pošli" name="tlacidlo">
+</form> 
+ 
+<script>
+        var dt = new Date();
+        var ho = dt.getHours();
+        var mi = dt.getMinutes();
+        var se = dt.getSeconds();
+        document.getElementById("cas").value = Math.floor(ho / 10) + "" + ho % 10 + ":" +
+                                               Math.floor(mi / 10) + "" + mi % 10 + ":" +
+                                               Math.floor(se / 10) + "" + se % 10;
+        //dt.toLocaleTimeString();
+        y = dt.getFullYear();
+        m = dt.getMonth() + 1;
+        d = dt.getDate();
+        var pom = y+'-'+ Math.floor(m / 10) + '' + (m % 10) +'-'+ Math.floor(d / 10) + '' + (d % 10);
+        console.log(Math.floor(m / 10));
+        document.getElementById("datum").value = pom;
+       
+    
+    </script>
+ 
+ 
+ 
+
+
+</section>
+
+
+  </body>
+</html>

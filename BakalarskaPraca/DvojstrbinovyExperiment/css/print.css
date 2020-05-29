@@ -1,0 +1,104 @@
+﻿@page { size: auto;  margin: 0mm; }
+
+body {
+	margin: 0%;
+	font-family: "Arial";   
+  font-weight: bold; 
+   min-width: 300px;
+}
+
+header {
+	margin: 0%;
+	padding: 0%;
+	height: 0%;
+	width: 0%
+}
+section {
+	padding: 1%;
+	margin: 1%;
+  margin-top: 0%;
+  padding-top: 0%;   
+  	width: 65%;
+	float: left;
+	text-align: center;    
+}   
+aside {
+	
+	padding: 1%;
+	margin: 1%;
+	margin-top: 0.5%; 
+  	width: 40%;
+        //float: right;
+	border: solid;
+	border-color: black;
+	position: absolute;
+	top:45%;
+	left:30%;
+	
+
+}
+canvas {
+	position: relative;
+	top: 100px;
+	left:10%;
+	width: 650px;
+	height: 600px;
+}
+
+
+
+input {
+	margin: 0.5em;
+	
+  width: 15em;
+	font-family: "Comic Sans MS";
+	background-color: inherit;
+	font-weight: bold;
+	border: none;
+	color: black;
+	
+}
+
+select {
+	font-family: "Arial";
+	font-size: larger;
+}
+ 
+ 
+ 
+ .slider{
+    display:none;
+     }
+
+
+
+input[type="image"] {
+display:none;
+
+}
+.tlac{
+display:none;
+}
+
+input[type="text"] {
+width: 90px;
+margin-right: 0px;
+//height: 0%;
+}
+
+nav {
+display: none;
+}
+a{
+display:none;
+
+}
+footer {
+display: none;
+	
+}
+
+
+
+
+

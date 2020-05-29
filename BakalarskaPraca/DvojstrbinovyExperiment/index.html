@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title> Dvojštrbinový experiment </title>  
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>        
+      <link href="css/st.css" rel="stylesheet" media="screen">
+      <link href="css/print.css" rel="stylesheet" media="print">
+         
+       </head>   
+     
+    <body>
+    
+    <aside> 
+      
+      <label for="pohyb">Vlnová dlžka svetla (nm)</label>
+      <input type="range" id="slid" value="380" min="380" max="800" class="slider" >
+      <input type="text" id="pohyb" value="0"  disabled="disabled"><br>
+      
+      <label for="pocTeplota">Šírka štrbín (nm)</label>
+      <input type="range" id="slid2" value="380" min="380" max="6000" class="slider"  >
+      <input type="text" id="pocTeplota" value="380"  disabled="disabled"><br>
+    
+      <label for="pocTlak">Vzdialenosť štrbín (nm)</label>
+      <input type="range" id="slid3" value="1520" min="1520" max="8000" class="slider"  >
+      <input type="text" id="pocTlak" value="1520"  disabled="disabled"><br>
+      
+      <label for="rychlost" id = rychlostlabel>Rýchlosť animácie</label>
+      <input type="range" id="rychl" value="10" min="10" max="80" class="slider"  >
+      
+    
+       <br>
+       <br>
+       <a href="../dvojstrbinaform.html" target="_blank">VÝZVA</a> 
+        <a href="" id="s" onclick="printni(); return false;"> Vytlač </a>
+        <a href="../ucebnica2.pdf#page=18" target="_blank">Učebnica</a> 
+      
+     
+      
+      </aside>
+      <nav id ="navigacia">  
+     <a href="../index.html">Archimedov zákon</a>
+     <a href="../IzobarickyDej/index.html">Izobarický dej</a>
+     <a href="../DvojstrbinovyExperiment/index.html">Dvojštrbinový experiment</a>
+     
+     </nav>   
+     <div id ='tlacidla' class ="tlac"> 
+     <input type="image" src="play.png" id="spust" onclick="spusti()"> 
+       <input type="image" src="stop.png" id="pauza" onclick="paus()"> 
+       </div>
+  <section> 
+      <canvas id='canv' width="1400" height="1000"> </canvas><br> 
+     
+</section> 
+
+
+      <footer>
+    
+    <p> Vyrobil <strong> Matej Dráb </strong> <p> 
+     E-mail: matejdrab1@gmail.com
+     
+    </footer>
+  </body> 
+ <script  src='moj.js'> </script >  
+</html>

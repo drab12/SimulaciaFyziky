@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title> Izobaricky dej </title>  
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+      <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script>      
+      <link href="css/styl.css" rel="stylesheet" media="screen">
+      <link href="css/print.css" rel="stylesheet" media="print">      
+      <meta name="viewport" content="width=device-width, initial-scale=1.00, maximum-scale=1.00, minimum-scale=1.00, user-scalable=no">
+         
+       </head>
+      
+       
+    <body >
+    
+    <aside id='tab' class='tabulka'> 
+      
+      
+      <label for="pohyb">Počiatočný objem plynu (dm³)</label>
+      <input type="range" id="slid" value="100" min="100" max="400" class="slider" >
+      <input type="text" id="pohyb" value="0"  disabled="disabled"><br>
+      
+      <label for="pocTeplota">Počiatočná teplota plynu (°C)</label>
+      <input type="range" id="slid2" value="0" min="0" max="200" class="slider"  >
+      <input type="text" id="pocTeplota" value="0"  disabled="disabled"><br>
+    
+      <label for="pocTlak">Tlak (Pa)</label>
+      <input type="range" id="slid3" value="0" min="0" max="1000"  class="slider"  >
+      <input type="text" id="pocTlak" value="0"   disabled="disabled"><br>
+      
+       <label for="objem">Objem plynu (dm³) </label>
+      <input type="text" id="objem" value="0" disabled="disabled"><br>
+      
+       <label for="teplota">Teplota plynu (°C) </label>
+      <input type="text" id="teplota" value="0.00" disabled="disabled"><br>
+      
+      <label for="typPlynu">Typ plynu : </label>
+       <select name="Druh" size="1"  id="Druh" required onmouseup = "nacitaj()">
+            <option value="Vodik">Vodík</option>
+            <option value="Dusik">Dusík</option> 
+            <option value="Helium">Hélium</option>
+      </select>
+      
+       <br>
+       <br>
+       <a href="../izobarform.html" target="_blank">VÝZVA</a> 
+       <a href="" id="s" onclick="printni(); return false;"> Vytlač </a>       
+       <a href="../ucebnica.pdf#page=18" target="_blank">Učebnica</a>
+      </aside> 
+       <nav id ="navigacia">  
+     <a href="../index.html">Archimedov zákon</a>
+     <a href="../IzobarickyDej/index.html">Izobarický dej</a>
+     <a href="../DvojstrbinovyExperiment/index.html">Dvojštrbinový experiment</a>
+     
+     </nav>                        
+  <div id ='tlacidla' class ="tlac">
+<input type="image" src="play.png" id="spust" onclick="spusti()"> 
+  
+       <input type="image" src="stop.png" id="pauza" onclick="paus()">
+       <input type="image" src="reset.png" id="reset" onclick="resetuj()">
+       <input type="image" src="extrapolacia.png" id="extrapol" onclick="extrapoluj()"> 
+       </div>  
+  <section> 
+  
+      <canvas id='canv' width="700" height="1000"> </canvas><br>
+      <div id = "chart" class="contajner">
+      </div> 
+     
+</section>
+ 
+             
+
+        <footer>
+    
+    <p> Vyrobil <strong> Matej Dráb </strong> <p> 
+     E-mail: matejdrab1@gmail.com
+     
+    </footer>
+  </body> 
+ <script  src='moj.js'> </script >  
+</html>

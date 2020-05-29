@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head >
+<meta charset="utf-8">
+<link href="style.css" rel="stylesheet" media="all">
+<script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> 
+    </script> 
+    <script> 
+      
+        $.getJSON("https://api.ipify.org?format=json", 
+                                          function(data) { 
+            document.getElementById("ii").value = data.ip;
+        }) 
+    </script> 
+    
+
+<title>Archimedov zákon</title>
+</head>
+<body >
+<header>
+
+<h1> Archimedov zákon</h1>
+
+
+</header>
+
+
+<section>
+
+<form action="uloz.php" method="POST">
+
+<br>
+<h4> 1. Úloha </h4> 
+    <p>Čím je hustota telesa vyššia, tým viac bude v morskej vode teleso:</p>
+  
+    
+  <div>  
+  <p><input type="radio" name="prva" id="obj1" value="1" required  <label for="obj1">nadľahčované</label></p>
+  <p><input type="radio" name="prva" id="obj2" value="2" <label for="obj2">ľahšie klesať ku dnu</label>
+	<br>
+  </p>
+  </div>
+  
+   
+   
+<h4> 2. Úloha </h4> 
+
+   <p>Zistite, či sa guma potopí v oleji.</p>
+   
+  <div> 
+   <p><input type="radio" name="druha" id="vztlakova" value="1" required  <label for="vztlakova">áno</label></p>
+   <p><input type="radio" name="druha" id="vztlkaova2" value="2" <label for="vztlakova2">nie</label>	
+	 <br>
+   </p>
+   </div>
+  
+  <h4> 3. Úloha </h4> 
+    <p>Zistite, či sa železo potopí v peroxide vodíka.</p>
+   
+  <div>  
+  <p><input type="radio" name="tretia" id="objc1" value="1" required  <label for="objc1">áno</label></p>
+   <p><input type="radio" name="tretia" id="objc2" value="2" <label for="objc2">nie</label>	
+	<br>
+  </p>
+  </div> 
+  
+  <h4> 4. Úloha </h4> 
+    <p>Zistite, čo majú spoločné guma a dubové drevo pri ponorení do peroxidu vodíka.</p>
+   
+   <div>  
+  <p><input type="radio" name="stvrta" id="objk1" value="1" required  <label for="objk1">potopia sa až na dno</label></p>
+  <p><input type="radio" name="stvrta" id="objk2" value="2" <label for="objk2">guma sa potopí a dubové drevo sa bude vznášať v kvapaline</label></p>
+  <p><input type="radio" name="stvrta" id="objk3" value="3" <label for="objk3">budú sa vznášať v kvapaline</label>
+	<br>
+  </p> 
+  </div>
+ 
+  <h4> 5. Úloha </h4> 
+    <p>Zväčšením telesa sa zvýši aj jeho hmostnosť a teda vytlačí viac kvapaliny. Preto:</p>
+ 
+   <div>  
+   <p><input type="radio" name="piata" id="objw1" value="1" 
+  required  <label for="objw1">pre telesá, ktoré majú vyššiu hustotu ako voda, platí, že s menším objemom plávajú na hladine, ale po zväčšení objemu klesnú na dno</label>
+  </p>
+  <p><input type="radio" name="piata" id="objw2" value="2" 
+  <label for="objw2">pre telesá, ktoré majú vyššiu hustotu ako voda, platí, že s menším objemom sú na dne, ale po zväčšení objemu vyplávajú na hladinu</label>
+  </p>
+  <p><input type="radio" name="piata" id="objw3" value="3" 
+  <label for="objw3">pre telesá, ktoré majú nižšiu hustotu ako voda, platí, že s menším objemom plávajú na hladine, ale po zväčšení objemu klesnú na dno</label>
+  </p>
+  <p><input type="radio" name="piata" id="objw4" value="4"
+ <label for="objw4">pre telesá, ktoré majú nižšiu hustotu ako voda, platí, že s menším objemom sú na dne, ale po zväčšení objemu vyplávajú na hladinu</label>
+ </p>
+ <p> <input type="radio" name="piata" id="objw7" value="5" <label for="objw7">neplatí ani jedno z tvrdení</label>
+	<br>
+  </p>
+  </div> 
+  <br>
+ 
+
+ 
+ <input id ="idcko" type="text" value="ArchimedovZakon" name="id" hidden> 
+ <input id="ii" type="text" name="ip" value="" hidden>
+ <input id="cas" type="text" name="c" value="" hidden>  
+ <input id="datum" type="text" name="d" value="" hidden>  
+ 
+    
+<input type="submit" value="pošli" name="tlacidlo">
+</form> 
+<script>
+        var dt = new Date();
+        var ho = dt.getHours();
+        var mi = dt.getMinutes();
+        var se = dt.getSeconds();
+        document.getElementById("cas").value = Math.floor(ho / 10) + "" + ho % 10 + ":" +
+                                               Math.floor(mi / 10) + "" + mi % 10 + ":" +
+                                               Math.floor(se / 10) + "" + se % 10;
+        //dt.toLocaleTimeString();
+        y = dt.getFullYear();
+        m = dt.getMonth() + 1;
+        d = dt.getDate();
+        var pom = y+'-'+ Math.floor(m / 10) + '' + (m % 10) +'-'+ Math.floor(d / 10) + '' + (d % 10);
+        console.log(Math.floor(m / 10));
+        document.getElementById("datum").value = pom;
+       
+    
+    </script>
+ 
+
+ 
+ 
+
+
+</section>
+
+
+  </body>
+</html>

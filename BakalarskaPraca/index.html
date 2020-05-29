@@ -1,0 +1,111 @@
+ <!DOCTYPE HTML>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title> Archimedov zákon </title>  
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>      
+      <link href="ArchimedovZakon/css/styles.css" rel="stylesheet" media="screen">
+      <link href="ArchimedovZakon/css/print.css" rel="stylesheet" media="print">
+         
+       </head>
+       
+    <body>
+    
+    
+       
+ <aside> 
+      
+      <label for="pohyb">Poloha telesa (m)</label> <input type="text" id="pohyb" value="0"  disabled="disabled"> <br>
+      <input type="range" id="slid" value="0" min="0" max="570" step = 0.01 class="slider"  > 
+       <br>
+      
+      <label for="vyska">Výška telesa (cm)</label> <input type="text" id="vyska" value="50"  disabled="disabled"> <br>
+      <input type="range" id="slid2" value="50" min="50" max="120"  class="slider"  >
+      <br>
+    
+      <label for="sirka">Šírka telesa (cm)</label>  <input type="text" id="sirka" value="50"  disabled="disabled"><br>  
+      <input type="range" id="slid3" value="50" min="50" max="120"  class="slider"  >
+      <br>
+      
+       <label for="objem">Objem telesa (m³) </label>
+      <input type="text" id="objem" value="0" disabled="disabled"><br>
+      
+       <label for="objemp">Objem ponorenej časti (m³) </label>
+      <input type="text" id="objemp" value="0" disabled="disabled"><br>
+      
+       <label for="hustotaTelsesa">Hustota telesa (kg/m³) </label>
+      <input type="text" id="hustotaTelesa" value="0" disabled="disabled"><br>
+      
+       <label for="hustotaKvapaliny">Hustota kvapaliny (kg/m³) </label>
+      <input type="text" id="hustotaKvapaliny" value="0" disabled="disabled"><br>
+      
+      
+      <label for="tiazova">Tiažová sila (N) </label>
+      <input type="text" id="tiazova" value="0" disabled="disabled"><br>
+      
+      <label for="vztlakova">Vztlaková sila (N) </label>
+      <input type="text" id="vztlakova" value="0"  disabled="disabled"><br>
+      
+      <label for="vysledna">Výsledná sila (N)</label>
+      <input type="text" id="vysledna" value="0"  disabled="disabled"><br>
+      
+      <label for="druhtelesa">Typ telesa : </label>
+       <select name="Druh" size="1"  id="Druh" required onmouseup = "nacitaj()">
+    <option value="Zelezo">Železo</option>
+    <option value="Olovo">Olovo</option> 
+    <option value="Med">Meď</option>
+    <option value="Drevo">Ľahké Drevo</option>
+    <option value="Dub">Dubové Drevo</option>
+    <option value="Guma">Guma</option>   
+  </select>
+      <br>
+      
+        <label for="druhtelesa">Typ kvapaliny </label>
+       <select name="Druh2" size="1"  id="Druh2" required onmouseup = "nacitaj()">
+	<option value="Voda">Voda</option>
+  <option value="Morska voda">Morska voda</option>
+		<option value="Olej">Olej</option>
+		    <option value="Etanol">Etanol</option> 
+    <option value="Peroxid vodika">Peroxid vodíka</option>   
+    <option value="Nafta">Nafta</option>  
+    <option value="Ropa">Ropa</option>   
+  </select>
+     <br>
+     <br>
+  
+      <a href="archimedform.html" target="_blank">VÝZVA</a> 
+      <a href="" id="s" onclick="printni(); return false;" > Vytlač </a> 
+      <a href="ucebnica.pdf#page=101" target="_blank">Učebnica</a>
+      </aside>
+       <nav id ="navigacia">  
+     <a href="index.html">Archimedov zákon</a>
+     <a href="IzobarickyDej/index.html">Izobarický dej</a>
+     <a href="DvojstrbinovyExperiment/index.html">Dvojštrbinový experiment</a>
+     
+     </nav>   
+       <div id ='tlacidla' class ="tlac"> 
+       <input type="image" src="ArchimedovZakon/play.png" id="spust" onclick="spusti()"> 
+       <input type="image" src="ArchimedovZakon/stop.png" id="pauza"  onclick="paus()">
+       </div>                       
+  <section> 
+  
+      <canvas id='canv' width="1200" height="800"> </canvas><br>
+      
+
+      
+</section>
+
+
+ 
+       
+
+            
+     <footer>
+    
+    <p> Vyrobil <strong> Matej Dráb </strong> <p> 
+     E-mail: matejdrab1@gmail.com
+     
+    </footer>
+  </body> 
+ <script  src='ArchimedovZakon/moj.js'> </script >  
+</html>

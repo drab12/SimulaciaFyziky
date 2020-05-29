@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head >
+<meta charset="utf-8">
+<link href="style.css" rel="stylesheet" media="all">
+<script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> 
+    </script> 
+    <script> 
+      
+        $.getJSON("https://api.ipify.org?format=json", 
+                                          function(data) { 
+            document.getElementById("ii").value = data.ip;
+        }) 
+    </script> 
+    
+<title>Izobarický dej</title>
+</head>
+<body >
+<header>
+
+<h1> Izobarický dej</h1>
+
+
+</header>
+
+
+<section>
+
+<form action="uloz.php" method="POST">
+
+<br> 
+
+ <h4> 1. Úloha </h4> 
+    <p>
+      Čo je základná vlastnosť izobarického deja ?  
+   </p>
+   
+  <div>
+  <p><input type="radio" name="prva" id="objc1" value="1" required  <label for="objc1">so stúpajúcou teplotou sa mení tlak a objem zostáva konštantný</label></p>
+	<p><input type="radio" name="prva" id="objc2" value="2" <label for="objc2">so stúpajúcou teplotou sa mení objem a tlak zostáva konštantný</label>
+	<br>
+  </p>
+  </div>
+  
+   <h4> 2. Úloha </h4> 
+    <p>
+   Zistite, ako závisí rýchlosť experimentu od počiatočného objemu a počiatočnej teploty. 
+   </p>
+   
+  <div> 
+  <p><input type="radio" name="druha" id="objk1" value="1" required 
+   <label for="objk1">čím je počiatočný objem väčší ako počiatočná teplota, tým je experiment rýchlejší</label> </p>
+	<p><input type="radio" name="druha" id="objk2" value="2" 
+  <label for="objk2"> čím je počiatočná teplota väčšia ako počiatočný objem, tým je experiment rýchlejší</label></p>
+	<p><input type="radio" name="druha" id="objk3" value="3" <label for="objk3">čím je počiatočný objem väčší ako počiatočná teplota, tým je experiment pomalší</label>
+	<br>
+  </p>
+  </div>
+
+  <h4> 3. Úloha </h4> 
+    <p>
+    Bude pre počiatočné hodnoty  100 dm³ a 50°C najvyššia nameraná teplota vyššia ako 2000°C ?
+   </p>
+   
+  <div> 
+  <p><input type="radio" name="tretia" id="zel" value="1" required  <label for="zel">áno</label></p>
+	<p><input type="radio" name="tretia" id="ol" value="2" <label for="ol">nie</label>	
+	<br>
+  </p>
+  </div>
+  
+  <h4> 4. Úloha </h4> 
+    <p>
+    Pomer objemu a teploty počas jedného experimentu so zvyšujúcou teplotou:
+   </p>
+   
+  <div> 
+  <p><input type="radio" name="stvrta" id="zel2" value="1" required  <label for="zel2">rastie lineárne</label></p>
+	<p><input type="radio" name="stvrta" id="ol4" value="2" <label for="ol4">rastie exponenciálne</label>	
+  <p><input type="radio" name="stvrta" id="ol1" value="3" <label for="ol1">klesá lineárne</label>	
+  <p><input type="radio" name="stvrta" id="ol2" value="4" <label for="ol2">klesá exponenciálne</label>	
+  <p><input type="radio" name="stvrta" id="ol3" value="5" <label for="ol3">nemení sa</label>	
+	<br>
+  </p>
+  </div>
+  
+   <h4> 5. Úloha </h4> 
+    <p>
+    Zistite, v akom pomere musí byť počiatočný objem a počiatočná teplota, aby bol tlak maximálny.
+   </p>
+   
+  <div> 
+  <p><input type="radio" name="piata" id="zel1" value="1" required  <label for="zel1">čím sú teplota a objem väčšie, tým je tlak väčší</label></p>
+	<p><input type="radio" name="piata" id="oli" value="2" <label for="oli">čím sú teplota a objem nižšie, tým je tlak väčší</label></p>	
+  <p><input type="radio" name="piata" id="oli1" value="3" <label for="oli1">keď teplota stúpa a objem klesá, tak tlak rastie</label></p>	
+  <p><input type="radio" name="piata" id="oli2" value="4" <label for="oli2">keď teplota klesa a objem stúpa, tak tlak rastie</label>	
+  
+	<br>
+  </p>
+  </div>
+  
+  <br>
+  
+ <input id ="idcko" type="text" value="IzobarickyDej" name="id" hidden>
+ <input id="ii" type="text" name="ip" value="" hidden>
+ <input id="cas" type="text" name="c" value="" hidden>  
+ <input id="datum" type="text" name="d" value="" hidden>  
+ 
+  
+<input type="submit" value="pošli" name="tlacidlo">
+</form> 
+ 
+<script>
+        var dt = new Date();
+        var ho = dt.getHours();
+        var mi = dt.getMinutes();
+        var se = dt.getSeconds();
+        document.getElementById("cas").value = Math.floor(ho / 10) + "" + ho % 10 + ":" +
+                                               Math.floor(mi / 10) + "" + mi % 10 + ":" +
+                                               Math.floor(se / 10) + "" + se % 10;
+        //dt.toLocaleTimeString();
+        y = dt.getFullYear();
+        m = dt.getMonth() + 1;
+        d = dt.getDate();
+        var pom = y+'-'+ Math.floor(m / 10) + '' + (m % 10) +'-'+ Math.floor(d / 10) + '' + (d % 10);
+        console.log(Math.floor(m / 10));
+        document.getElementById("datum").value = pom;
+       
+    
+    </script>
+ 
+</section>
+
+
+  </body>
+</html>
